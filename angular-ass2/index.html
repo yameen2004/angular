@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Circle Properties Calculator</title>
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+
+    <script src="bootstrap/bootstrap.js"></script>
+    <script src="angular.js"></script>
+   
+</head>
+
+<body ng-app="circleApp" ng-controller="circleCtrl">
+
+    <div class="container mt-5">
+
+        <h1 class="mb-4">Radius Properties Calculator</h1>
+        
+        <form>
+
+            <div class="mb-3">
+                <label for="radiusInput" class="form-label"> <h6> Enter the radius: </h6> </label>
+                <input type="number" class="form-control" id="radiusInput" ng-model="radius" placeholder="Radius">
+            </div>
+
+            <div class="mb-3">
+                <label for="propertySelect" class="form-label"> <h6> Select property: </h6> </label>
+                <select class="form-select" id="propertySelect" ng-model="selectedProperty">
+                    <option value="area">Area of circle</option>
+                    <option value="diameter">Diameter of circle</option>
+                    <option value="circumference">Circumference of circle</option>
+                    <option value="surfaceArea">Surface Area of Sphere</option>
+                </select>
+            </div>
+
+        </form>
+        
+        <div class="mt-3" ng-if="radius">
+
+            <h4>Result:</h4>
+
+            <p ng-if="selectedProperty === 'area'">Area of circle: <b> {{ calculateArea() }} </b> </p>
+            <p ng-if="selectedProperty === 'diameter'">Diameter of circle: <b> {{ calculateDiameter() }} </b> </p>
+            <p ng-if="selectedProperty === 'circumference'">Circumference of circle: <b> {{ calculateCircumference() }} </b> </p>
+            <p ng-if="selectedProperty === 'surfaceArea'">Surface Area of Sphere: <b> {{ calculateSurfaceArea() }} </b> </p>
+       
+        </div>
+    
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

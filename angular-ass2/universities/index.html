@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>University Task</title>
+      <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+      <script src="../bootstrap/bootstrap.js"></script>
+      <script src="angular.js"></script>
+
+</head>
+
+<body ng-app="">
+
+      <div class="container">
+            <div class="head">
+
+                  <h1>Select Universities</h1>
+
+                  <select ng-model="university">
+
+                        <option value="">Select</option>
+                        <option value="1">Government University</option>
+                        <option value="2">Private University</option>
+                        <option value="3">Semi-Privat University</option>
+
+                  </select>
+
+            </div>
+
+
+            <div ng-switch="university">
+
+                  <div ng-switch-when="1">
+                        <h2 class="text-center mb-4">Government Universities</h2>
+                        <div class="row justify-content-center">
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/g-uni-1.webp" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <h5 class="card-title">BBSU</h5>
+                                                <p class="card-text">Location: Karachi</p>
+                                                <p class="card-text">Degrees: BSCS, MBA</p>
+                                                <p class="card-text">Dean Name: BENAZIR BHUTTO SHAHEED UNIVERSITY LYARI
+                                                      KARACHI SINDH PAKISTAN</p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/g-uni-2.webp" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> FUUAST </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi </p>
+                                                <p class="card-text"> <b> Degrees : </b> (BSCS , MBBS , MBA)</p>
+                                                <p class="card-text"> <b> Deon Name </b> Federal Urdu University of
+                                                      Arts, Sciences &
+                                                      Technology </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/g-uni-3.jpg" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> AIOU </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi</p>
+                                                <p class="card-text"> <b> Degrees : </b> (BS Chemistry.Chemistry,
+                                                      BS Islamic Studies)</p>
+                                                <p class="card-text"> <b> Deon Name </b> Allama Iqbal Open University
+                                                      Karachi </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/g-uni-4.jpg" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> SMIU </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi </p>
+                                                <p class="card-text"> <b> Degrees : </b> (BS (Arabic))</p>
+                                                <p class="card-text"> <b> Deon Name </b> Sindh Madressatul Islam
+                                                      University </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                        </div>
+                  </div>
+
+                  <div ng-switch-when="2">
+                        <h2 class="text-center mb-4">Private Universities</h2>
+                        <div class="row justify-content-center">
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/p-uni-1.jpg" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <h5 class="card-title">BBSU</h5>
+                                                <p class="card-text">Location: Karachi</p>
+                                                <p class="card-text">Degrees: BSCS, MBA</p>
+                                                <p class="card-text">Dean Name: BENAZIR BHUTTO SHAHEED UNIVERSITY LYARI
+                                                      KARACHI SINDH PAKISTAN</p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/p-uni-2.jpg" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> FUUAST </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi </p>
+                                                <p class="card-text"> <b> Degrees : </b> (BSCS , MBBS , MBA)</p>
+                                                <p class="card-text"> <b> Deon Name </b> Federal Urdu University of
+                                                      Arts, Sciences &
+                                                      Technology </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/p-uni-3.jpg" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> AIOU </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi</p>
+                                                <p class="card-text"> <b> Degrees : </b> (BS Chemistry.Chemistry,
+                                                      BS Islamic Studies)</p>
+                                                <p class="card-text"> <b> Deon Name </b> Allama Iqbal Open University
+                                                      Karachi </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/p-uni-4.jpg" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> SMIU </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi </p>
+                                                <p class="card-text"> <b> Degrees : </b> (BS (Arabic))</p>
+                                                <p class="card-text"> <b> Deon Name </b> Sindh Madressatul Islam
+                                                      University </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                        </div>
+                  </div>
+
+
+                  <div ng-switch-when="3">
+                        <h2 class="text-center mb-4"><Semi-Private></Semi-Private> Universities</h2>
+                        <div class="row justify-content-center">
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/s-uni-1.png" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <h5 class="card-title">BBSU</h5>
+                                                <p class="card-text">Location: Karachi</p>
+                                                <p class="card-text">Degrees: BSCS, MBA</p>
+                                                <p class="card-text">Dean Name: BENAZIR BHUTTO SHAHEED UNIVERSITY LYARI
+                                                      KARACHI SINDH PAKISTAN</p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/s-uni-2.jpg" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> FUUAST </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi </p>
+                                                <p class="card-text"> <b> Degrees : </b> (BSCS , MBBS , MBA)</p>
+                                                <p class="card-text"> <b> Deon Name </b> Federal Urdu University of
+                                                      Arts, Sciences &
+                                                      Technology </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/s-uni-3.png" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> AIOU </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi</p>
+                                                <p class="card-text"> <b> Degrees : </b> (BS Chemistry.Chemistry,
+                                                      BS Islamic Studies)</p>
+                                                <p class="card-text"> <b> Deon Name </b> Allama Iqbal Open University
+                                                      Karachi </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6">
+                                    <div class="card">
+                                          <img src="img/s-uni-4.webp" class="card-img-top" alt="..." height="250px">
+                                          <div class="card-body">
+                                                <p class="card-title"> <b> Name : </b> SMIU </p>
+                                                <p class="card-text"> <b> Location : </b> Karachi </p>
+                                                <p class="card-text"> <b> Degrees : </b> (BS (Arabic))</p>
+                                                <p class="card-text"> <b> Deon Name </b> Sindh Madressatul Islam
+                                                      University </p>
+                                          </div>
+                                    </div>
+                              </div>
+
+                        </div>
+                  </div>
+
+                  <div ng-switch-default="">
+                        <div class="alert alert-danger text-center">
+                              <h6>Please Select One Category</h6>
+                        </div>
+                  </div>
+
+
+            </div>
+      </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+      <div class="head">
+            <h1>Select Universities</h1>
+            <select class="form-select mb-3" ng-model="university">
+                  <option value="">Select</option>
+                  <option value="1">Government University</option>
+                  <option value="2">Private University</option>
+                  <option value="3">Semi-Private University</option>
+            </select>
+      </div>
+
+      <div ng-switch="university">
+            <div ng-switch-when="1">
+                  <h2 class="text-center mb-4">Government Universities</h2>
+                  <div class="row justify-content-center">
+
+                        <div class="col-lg-3 col-md-6">
+                              <div class="card">
+                                    <img src="img/g-uni-1.webp" class="card-img-top" alt="..." height="250px">
+                                    <div class="card-body">
+                                          <h5 class="card-title">BBSU</h5>
+                                          <p class="card-text">Location: Karachi</p>
+                                          <p class="card-text">Degrees: BSCS, MBA</p>
+                                          <p class="card-text">Dean Name: BENAZIR BHUTTO SHAHEED UNIVERSITY LYARI
+                                                KARACHI SINDH PAKISTAN</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                              <div class="card">
+                                    <img src="img/g-uni-1.webp" class="card-img-top" alt="..." height="250px">
+                                    <div class="card-body">
+                                          <p class="card-title"> <b> Name : </b> FUUAST </p>
+                                          <p class="card-text"> <b> Location : </b> Karachi </p>
+                                          <p class="card-text"> <b> Degrees : </b> (BSCS , MBBS , MBA)</p>
+                                          <p class="card-text"> <b> Deon Name </b> Federal Urdu University of Arts,
+                                                Sciences &
+                                                Technology </p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                              <div class="card">
+                                    <img src="img/g-uni-1.webp" class="card-img-top" alt="..." height="250px">
+                                    <div class="card-body">
+                                          <p class="card-title"> <b> Name : </b> AIOU </p>
+                                          <p class="card-text"> <b> Location : </b> Karachi</p>
+                                          <p class="card-text"> <b> Degrees : </b> (BS Chemistry.Chemistry,
+                                                BS Islamic Studies)</p>
+                                          <p class="card-text"> <b> Deon Name </b> Allama Iqbal Open University Karachi
+                                          </p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                              <div class="card">
+                                    <img src="img/g-uni-1.webp" class="card-img-top" alt="..." height="250px">
+                                    <div class="card-body">
+                                          <p class="card-title"> <b> Name : </b> SMIU </p>
+                                          <p class="card-text"> <b> Location : </b> Karachi </p>
+                                          <p class="card-text"> <b> Degrees : </b> (BS (Arabic))</p>
+                                          <p class="card-text"> <b> Deon Name </b> Sindh Madressatul Islam University
+                                          </p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <!-- Add more cards for other universities -->
+                  </div>
+            </div>
+
+            <!-- Repeat similar code blocks for Private and Semi-Private Universities -->
+
+            <div ng-switch-default="">
+                  <div class="alert alert-danger text-center">
+                        <h6>Please Select One Category</h6>
+                  </div>
+            </div>
+      </div>
+</div> -->
