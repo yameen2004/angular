@@ -1,1 +1,1 @@
-angular-ass1.netlify.app
+https://angular-ass1.netlify.app/
