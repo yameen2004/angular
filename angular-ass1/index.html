@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" />
+
+    <!-- Angular -->
+    <script src="angular.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="bootstrap/bootstrap.js"></script>
+  </head>
+
+  <body ng-app="">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-5">
+         
+            <h4 class="text-xl font-semibold">Calculate BMI</h4>
+
+            <div class="mb-3">
+              <h6>Weight</h6>
+              <input
+                type="number"
+                ng-model="weight"
+                placeholder="Weight in kg"
+                class="form-control"
+              />
+            </div>
+
+            <div class="mb-3">
+              <h6>Height</h6>
+              <input
+                type="number"
+                ng-model="height"
+                placeholder="Height in meters"
+                class="form-control"
+              />
+            </div>
+
+            <p class="text-md font-semibold">
+              Your BMI is <b>{{weight/(height*height)}}</b> 
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="mb-5">
+            
+            <h4 class="text-xl font-semibold">Simple Interest</h4>
+
+            <div class="mb-3">
+              <h6>Amount</h6>
+              <input
+                type="number"
+                ng-model="amount"
+                placeholder="Amount"
+                class="form-control"
+              />
+            </div>
+
+            <div class="mb-3">
+              <h6>Rate</h6>
+              <input
+                type="number"
+                ng-model="rate"
+                placeholder="Rate"
+                class="form-control"
+              />
+            </div>
+
+            <div class="mb-3">
+              <h6>Time</h6>
+              <input
+                type="number"
+                ng-model="time"
+                placeholder="Time in years"
+                class="form-control"
+              />
+            </div>
+
+            <p class="text-md font-semibold">
+              Your simple interest is <b>{{(amount*rate*time)/100}}</b> 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-5">
+            <h4 class="text-xl font-semibold">
+              How many courses are you going to take this semester? The
+              per-course fee is $18000
+            </h4>
+
+            <div class="mb-3">
+              <h6>Number of courses</h6>
+              <input
+                type="number"
+                ng-model="course"
+                placeholder="Total courses"
+                class="form-control"
+              />
+            </div>
+
+            <p class="text-md font-semibold">
+              Your total amount is <b>{{course * 18000}}</b> 
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="mb-5">
+            <h4 class="text-xl font-semibold">Final Velocity</h4>
+
+            <div class="mb-3">
+              <h6>Initial velocity</h6>
+
+              <input
+                type="number"
+                ng-model="vi"
+                placeholder="Initial velocity"
+                class="form-control"
+              />
+            </div>
+
+            <div class="mb-3">
+              <h6>Time</h6>
+
+              <input
+                type="number"
+                ng-model="time"
+                placeholder="Time"
+                class="form-control"
+              />
+            </div>
+
+            <div class="mb-3">
+              <h6>Acceleration</h6>
+
+              <input
+                type="number"
+                ng-model="acceleration"
+                placeholder="Acceleration"
+                class="form-control"
+              />
+            </div>
+
+            <p class="text-md font-semibold">
+              Your final velocity is <b>{{(vi + acceleration) * time}}</b> 
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
