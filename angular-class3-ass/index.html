@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <script src="bootstrap/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="angular.js"></script>
+ 
+    
+</head>
+
+<body ng-app="calculateApp" ng-controller="CalculatorController">
+    <div class="container mt-5">
+        <div class="card p-4 col-sm-12">
+            <h2 class="text-center">Mark Sheet</h2>
+            <div class="input-group input-group-sm mb-3">
+                <input type="number" class="form-control" ng-model="english" placeholder="English marks" min="0" max="100">
+                <input type="number" class="form-control" ng-model="urdu" placeholder="Urdu marks" min="0" max="100">
+                <input type="number" class="form-control" ng-model="math" placeholder="Math marks" min="0" max="100">
+            </div>
+            
+            <div ng-if="error" class="text-center" id="error" style="background-color: {{bgColor}}; color: {{color}};">{{error}}</div>
+            <!-- Table -->
+            <div class="table-responsive mt-4">
+                <table class="table table-bordered  table-striped">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks Obtained</th>
+                            <th>Max Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>English</td>
+                            <td ng-class="{'alert-cell': english < 33}">{{english}}</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>Urdu</td>
+                            <td ng-class="{'alert-cell': urdu < 33}">{{urdu}}</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>Math</td>
+                            <td ng-class="{'alert-cell': math < 33}">{{math}}</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <th>Total</th>
+                            <th>{{totalMarks}}</th>
+                            <th>300</th>
+                        </tr>
+                        <tr>
+                            <th>Percentage</th>
+                            <th colspan="2" style="background-color: {{bgColor}}; color: {{color}};">{{percentage}} %</th>
+                        </tr>
+                        <tr>
+                            <th>Grade</th>
+                            <th colspan="2" style="background-color: {{bgColor}}; color: {{color}};">{{rank}}</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="d-grid">
+                <button ng-click="calculate()" type="button" class="btn btn-dark">Get Total Marks & Percentage</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
