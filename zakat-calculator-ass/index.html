@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <script src="bootstrap/bootstrap.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- angular file -->
+    <script src="angular.js"></script>
+
+    <!-- angular code -->
+    <script src="app.js"></script>
+
+    <title>Zakat Calculator</title>
+
+</head>
+
+<body ng-app="myApp" ng-controller="ctrl_one">
+
+    <div class="container d-flex justify-content-center">
+
+        <div class="card col-md-8">
+
+            <h1 class="text-center">Zakat Calculator</h1>
+
+            <div class="card-body mt-5">
+
+                <h4 class="text-center">Enter your Gold weight in Tola</h4>
+                <input type="number" class="form-control my-2" ng-model="gold" placeholder="Gold in Tolas">
+
+                <h4 class="text-center">Enter your Silver weight in Tola</h4>
+                <input type="number" class="form-control my-2" ng-model="silver" placeholder="Silver in Tolas">
+
+                <h4 class="text-center">Enter your Assets Amount</h4>
+                <input type="number" class="form-control my-2" ng-model="assets" placeholder="Assets in Rs.">
+
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-success my-3 w-50" ng-click="calculateZakat()">Calculate Zakat</button>
+                </div>
+
+                <table class="table table-light table-striped mt-4">
+                    <tbody>
+                        <thead>
+                            <th>Items</th>
+                            <th>Price</th>
+                        </thead>
+                        <tr>
+                            <td>Gold Price:</td>
+                            <td>{{ goldPrice | currency:'Rs.' }}</td>
+                        </tr>
+                        <tr>
+                            <td>Silver Price:</td>
+                            <td>{{ silverPrice | currency:'Rs.' }}</td>
+                        </tr>
+                        <tr>
+                            <td>Assets Price:</td>
+                            <td>{{ assets | currency:'Rs.' }}</td>
+                        </tr>
+                        <tr>
+                            <td>Gold Zakat:</td>
+                            <td>{{ goldZakat | currency:'Rs.' }}</td>
+                        </tr>
+                        <tr>
+                            <td>Silver Zakat:</td>
+                            <td>{{ silverZakat | currency:'Rs.' }}</td>
+                        </tr>
+                        <tr>
+                            <td>Assets Zakat:</td>
+                            <td>{{ assetsZakat | currency:'Rs.' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="text-center">Your Zakat is: {{ totalZakat | currency:'Rs.' }}</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
