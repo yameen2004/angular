@@ -12,3 +12,5 @@ ag-c7-marksheet
 https://ag7-marksheet-ass.netlify.app/
 zakat calculator
 https://zakat-calculate.netlify.app/
+quiz-app
+https://ng-quizapp.netlify.app/
