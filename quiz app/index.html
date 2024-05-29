@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ APP</title>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <script src="bootstrap/bootstrap.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Angular Link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Angular Code -->
+    <script src="app.js"></script>
+
+</head>
+
+<body ng-app="quizApp" ng-controller="QuizController" class="bg-light">
+
+    <div class="container py-5">
+
+        <h1 class="mb-5 text-center quiz-title">Quiz App</h1>
+
+        <div ng-repeat="question in questions" class="mb-4">
+            <div class="p-4 rounded shadow question-box">
+                <p class="fw-bold">{{question.question}}</p>
+                <div class="mt-3">
+                    <div ng-repeat="option in question.options" class="form-check">
+                        <input ng-if="!question.multiple" class="form-check-input" type="radio"
+                            name="quiz{{question.id}}" id="quiz{{question.id}}-option{{$index}}"
+                            ng-click="selectOption(option, question.id)"
+                            ng-class="{'correct-answer': showAnswers && option === question.correctAnswer && question.selected.includes(option), 'wrong-answer': showAnswers && option !== question.correctAnswer && question.selected.includes(option)}">
+                        <input ng-if="question.multiple" class="form-check-input" type="checkbox"
+                            name="quiz{{question.id}}" id="quiz{{question.id}}-option{{$index}}"
+                            ng-click="selectOption(option, question.id, question.multiple)"
+                            ng-class="{'correct-answer': showAnswers && question.correctAnswer.includes(option) && question.selected.includes(option), 'wrong-answer': showAnswers && !question.correctAnswer.includes(option) && question.selected.includes(option)}">
+                        <label class="form-check-label" for="quiz{{question.id}}-option{{$index}}">
+                            {{option}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button mt-5">
+
+            <button type="button" ng-disabled="isDisabled" ng-click="showResult()"
+                class=" mb-5 text-center btn btn-dark">Submit</button>
+
+        </div>
+
+        <div id="result" class="mt-4"></div>
+
+        <div class="mt-4" ng-if="showAnswers">
+            <div ng-repeat="wrong in wrongAnswers" class=" wrongAnswers p-3 rounded shadow bg-white mb-3">
+                <h4>Wrong Answers</h4>
+                <p class="fw-bold mb-2">{{questions[wrong].question}}</p>
+                <p class="mb-2">Your answer: <span class="wrong-answer p-1 rounded">{{questions[wrong].selected.join(',
+                        ')}}</span></p>
+                <p class="mb-0">Correct answer: <span
+                        class="correct-answer p-1 rounded">{{questions[wrong].correctAnswer.join(', ')}}</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
